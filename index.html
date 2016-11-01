@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <meta name="author" content="黄金亮">
-        <link rel="stylesheet" href="css/style.css">
-        <title>方块绘图</title>
-    </head>
-    <body>
-        
-        <section id="grid-container">
-            <canvas id="grid"></canvas>
-            <form> 
-                <button type="button" id="clear-track">清空</button>
-                <button type="button" id="save-track">保存</button>
-                <input id="track-name" type="text" placeholder="请输入轨迹名">
-            </form>
-        </section>
 
-        <section id="bricks-container">
-            <form>
-                <button type="button" id="square-brick">方砖</button>
-                <button type="button" id="triangle-brick">三角</button>
-                <button type="button" id="circle-brick">圆形</button>
-                <button type="button" id="curve-brick">曲线</button>
-            </form>
-        </section>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="author" content="黄金亮">
+	<link rel="stylesheet" href="css/style.css">
+	<title>方块绘图</title>
+</head>
 
-        <section id="tracks-container">
-            <h1>存在路径</h1>
-        </section>
-        
-        <script src="js/jquery.js"></script>
-        <script src="js/grid.js"></script>
-        <script src="js/store.js"></script>
-        <script src="js/application.js"></script>
+<body>
 
-        <script src="js/bricks/circle.js"></script>
-        <script src="js/bricks/curve.js"></script>
-        <script src="js/bricks/square.js"></script>
-        <script src="js/bricks/triangle.js"></script>
-    </body>
+	<section id="grid-container">
+		<canvas id="grid"></canvas>
+		<form>
+			<button type="button" id="clear-track">清空</button>
+			<button type="button" id="save-track">保存</button>
+			<input id="track-name" type="text" placeholder="请输入轨迹名">
+		</form>
+	</section>
+
+	<section id="bricks-container">
+		<form>
+			<button type="button" id="square-brick">方砖</button>
+			<button type="button" id="triangle-brick">三角</button>
+			<button type="button" id="circle-brick">圆形</button>
+			<button type="button" id="curve-brick">曲线</button>
+		</form>
+	</section>
+
+	<section id="tracks-container">
+		<h1>存在路径</h1>
+	</section>
+
+	<script src="js/jquery.js"></script>
+	<!--绘制网格，管理网格砖块-->
+	<script src="js/grid.js"></script>
+	<!--处理应用和数据库中间层-->
+	<script src="js/store.js"></script>
+	<!--应用核心，调用其他对象工作，处理用户交互，存放全局变量-->
+	<script src="js/application.js"></script>
+
+	<!--砖块对象-->
+	<script src="js/bricks/circle.js"></script>
+	<script src="js/bricks/curve.js"></script>
+	<script src="js/bricks/square.js"></script>
+	<script src="js/bricks/triangle.js"></script>
+</body>
+
 </html>
